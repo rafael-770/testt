@@ -6,18 +6,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  menuItem = {
+  menuItems = [{
     anchor: "/home",
     text: 'home'
-  }
+  }, {
+    anchor: "/about",
+    text: 'about'
+  }, {
+    anchor: "/contact",
+    text: 'contact'
+  }]
+
+  name: string;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  clicked() {
-    console.log('clicked');
+  inputBlur() {
+    this.name = 'student';
+    this.clicked();
+  }
+
+  clicked(eventName?) {
+    if (eventName)
+      console.log(eventName)
+    else
+      console.log('clicked');
   }
 
 }
