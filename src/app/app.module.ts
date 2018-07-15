@@ -11,6 +11,7 @@ import { UserComponent } from './user/user.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { QuestionComponent } from './question/question.component';
 import { QustionService } from './services/qustion.service';
+import { QDataService } from './Service/qdata.service'
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { QustionService } from './services/qustion.service';
     HttpClientModule
   ],
   providers: [
-    QustionService
+    QustionService,
+    QDataService
   ],
   bootstrap: [AppComponent]
 })
