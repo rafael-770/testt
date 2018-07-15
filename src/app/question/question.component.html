@@ -1,0 +1,5 @@
+<h2>{{question.text}}</h2>
+
+<div *ngFor='let answer of question.answers'>
+  <input type='radio' [name]='"a"+question.id' [value]='answer.id'>{{answer.text}}
+</div>

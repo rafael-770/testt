@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -7,6 +8,9 @@ import { FooterComponent } from './structure/footer/footer.component';
 import { AsideComponent } from './structure/aside/aside.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { UserComponent } from './user/user.component';
+import { QuizComponent } from './quiz/quiz.component';
+import { QuestionComponent } from './question/question.component';
+import { QustionService } from './services/qustion.service';
 
 @NgModule({
   declarations: [
@@ -15,12 +19,17 @@ import { UserComponent } from './user/user.component';
     FooterComponent,
     AsideComponent,
     UsersListComponent,
-    UserComponent
+    UserComponent,
+    QuizComponent,
+    QuestionComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    QustionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
